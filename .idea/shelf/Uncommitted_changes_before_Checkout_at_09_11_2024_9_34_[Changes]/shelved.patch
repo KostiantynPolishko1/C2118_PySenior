@@ -1,0 +1,27 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print('Lesson 4: Class Inharitance\\n')\r\n\r\n\r\nclass Person:\r\n    second_name: str\r\n    first_name: str\r\n    stat = 'male'\r\n    age = 22\r\n\r\n    def __init__(self, second_name: str, first_name: str):\r\n        self.first_name = first_name\r\n        self.second_name = second_name\r\n\r\n    def __str__(self):\r\n        person_info = f'{self.second_name} {self.first_name}, вік {self.age}, стать {self.stat}'\r\n        return f'{person_info}\\n'\r\n\r\n\r\nclass SchoolChild(Person):\r\n    activity: str\r\n\r\n    def __init__(self, second_name, first_name):\r\n        self.activity = 'studying'\r\n        self.second_name = second_name\r\n        self.first_name = first_name\r\n\r\n    def __str__(self):\r\n        person_info = Person.__str__(self)\r\n        return f'{person_info}main activity {self.activity}'\r\n\r\n\r\nKnyshTimur = SchoolChild('Книш', 'Тімур')\r\nprint(KnyshTimur)\r\n\r\n\r\nclass Teacher:\r\n    pass\r\n\r\n\r\nclass HeadManger(Person):\r\n    activity: str\r\n\r\n    def __init__(self, second_name, first_name):\r\n        self.activity = 'management'\r\n        self.second_name = second_name\r\n        self.first_name = first_name\r\n\r\n    def __str__(self):\r\n        person_info = Person.__str__(self)\r\n        return f'{person_info}main activity {self.activity}'\r\n\r\n\r\n
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -15,6 +15,9 @@
+         person_info = f'{self.second_name} {self.first_name}, вік {self.age}, стать {self.stat}'
+         return f'{person_info}\n'
+ 
++    def get_info(self):
++        print(f'person {self.second_name} {self.first_name}')
++
+ 
+ class SchoolChild(Person):
+     activity: str
+@@ -31,7 +34,7 @@
+ 
+ KnyshTimur = SchoolChild('Книш', 'Тімур')
+ print(KnyshTimur)
+-
++KnyshTimur.get_info()
+ 
+ class Teacher:
+     pass

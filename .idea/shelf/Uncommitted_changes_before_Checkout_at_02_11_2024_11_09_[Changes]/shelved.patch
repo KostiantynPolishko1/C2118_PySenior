@@ -1,0 +1,15 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print('Lesson 3: Work with several classes\\n')\r\n\r\nclass StudySubject:\r\n    name: str\r\n    hours: int\r\n    level: str\r\n\r\n    def __init__(self, name: str, hours: int, level: str):\r\n        self.name = name\r\n        self.hours = hours\r\n        self.level = level\r\n\r\n    def __str__(self):\r\n        return f'{self.name} {self.level}, кількість годин {self.hours}'\r\n\r\n\r\nclass Student:\r\n    first_name: str\r\n    second_name: str\r\n    age: int\r\n    is_offline: bool\r\n    study_subject: StudySubject\r\n\r\n    def __init__(self, second_name: str, first_name: str, age: int, study_subject: StudySubject, is_offline=True):\r\n        self.first_name = first_name\r\n        self.second_name = second_name\r\n        self.age = age\r\n        self.is_offline = is_offline\r\n        self.study_subject = study_subject\r\n\r\n    def __str__(self):\r\n\r\n        study_type: str\r\n        if self.is_offline:\r\n            study_type = 'offline'\r\n        else:\r\n            study_type = 'online'\r\n\r\n        student_info = f'{self.second_name} {self.first_name}, вік {self.age}, навчається {study_type}'\r\n\r\n        return f'{student_info}\\n{self.study_subject}'\r\n\r\n\r\npy_senior = StudySubject('Python', 18, 'Senior')\r\nDushlyukMakar = Student('Дишлюк', \"Макар\", 13, py_senior)\r\n\r\nprint(DushlyukMakar)\r\n
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -1,5 +1,6 @@
+ print('Lesson 3: Work with several classes\n')
+ 
++
+ class StudySubject:
+     name: str
+     hours: int
