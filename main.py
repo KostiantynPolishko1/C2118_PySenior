@@ -1,4 +1,5 @@
 import inspect
+
 from lesson4 import Student
 
 print('Lesson 5: Class Inspect')
