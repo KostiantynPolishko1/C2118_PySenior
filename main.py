@@ -1,11 +1,11 @@
 print('Lesson 8: Log and UnitTest')
 
-
 import logging
-
-
-logging.basicConfig(level=logging.WARNING, filename='pysenior.log', filemode='w',
-                    format='time%(asctime)s:level%(levelname)s:description-%(message)s')
+import unittest
+#
+#
+# logging.basicConfig(level=logging.WARNING, filename='pysenior.log', filemode='w',
+#                     format='time%(asctime)s:level%(levelname)s:description-%(message)s')
 
 # logging.debug('log level debug')
 # logging.info('log level info')
@@ -13,15 +13,25 @@ logging.basicConfig(level=logging.WARNING, filename='pysenior.log', filemode='w'
 # logging.error('log level error')
 # logging.critical('log level critical')
 
-logging.info('launch app')
+# logging.info('launch app')
+#
+# numbers = [2, 5, 3, 1, 0, 7, 9, 8]
+#
+# try:
+#     logging.warning('treat list by cycle')
+#     for i in range(0, 10):
+#         print(f'index {i}: element{numbers[i]}')
+#
+# except Exception as error:
+#     logging.error(error.__str__())
+#     print(error.__str__())
 
-numbers = [2, 5, 3, 1, 0, 7, 9, 8]
 
-try:
-    logging.warning('treat list by cycle')
-    for i in range(0, 10):
-        print(f'index {i}: element{numbers[i]}')
+def sum_value(a: int, b: int):
+    return a + b + 1
 
-except Exception as error:
-    logging.error(error.__str__())
-    print(error.__str__())
+class FunctionTest(unittest.TestCase):
+    def test_sum(self):
+        self.assertEqual(sum_value(2, 3), 5)
+
+unittest.main()
