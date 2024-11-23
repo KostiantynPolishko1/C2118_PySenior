@@ -1,0 +1,89 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>print('Lesson 7: Iterators, Closure function')\r\n\r\n\r\nclass Counter:\r\n    limit: int\r\n    index: int\r\n    step_iteration: int\r\n\r\n    def __init__(self, limit: int, step_iteration: int):\r\n        self.index = 0\r\n        self.limit = limit\r\n        self.step_iteration = step_iteration\r\n\r\n    def __iter__(self):\r\n        self.index = 0\r\n        return self\r\n\r\n    def __next__(self):\r\n        self.index += self.step_iteration\r\n        if self.index > self.limit:\r\n            raise StopIteration\r\n        return self.index\r\n\r\n\r\nnumbers = ['one', 'two', 3, 4, 'five', 'c++', 'c#']\r\ncounter = Counter(len(numbers), 2)\r\n\r\ntry:\r\n    for i in counter:\r\n        print(numbers[i])\r\nexcept Exception as e:\r\n    print('catch next error: ', e.__str__())\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -1,32 +1,52 @@
+-print('Lesson 7: Iterators, Closure function')
+-
++# print('Lesson 7: Iterators, Closure function')
++#
++#
++# class Counter:
++#     limit: int
++#     index: int
++#     step_iteration: int
++#
++#     def __init__(self, limit: int, step_iteration: int):
++#         self.index = 0
++#         self.limit = limit
++#         self.step_iteration = step_iteration
++#
++#     def __iter__(self):
++#         self.index = 0
++#         return self
++#
++#     def __next__(self):
++#         self.index += self.step_iteration
++#         if self.index > self.limit:
++#             raise StopIteration
++#         return self.index
++#
++#
++# numbers = ['one', 'two', 3, 4, 'five', 'c++', 'c#']
++# counter = Counter(len(numbers), 2)
++#
++# try:
++#     for i in counter:
++#         print(numbers[i])
++# except Exception as e:
++#     print('catch next error: ', e.__str__())
++#
+ 
+-class Counter:
+-    limit: int
+-    index: int
+-    step_iteration: int
++def set_exponantion(user_exponent: int):
++    exponent = user_exponent
+ 
+-    def __init__(self, limit: int, step_iteration: int):
+-        self.index = 0
+-        self.limit = limit
+-        self.step_iteration = step_iteration
++    def get_exponantion(user_value: int):
++        return user_value**exponent
+ 
+-    def __iter__(self):
+-        self.index = 0
+-        return self
++    return get_exponantion
+ 
+-    def __next__(self):
+-        self.index += self.step_iteration
+-        if self.index > self.limit:
+-            raise StopIteration
+-        return self.index
+ 
++exponent2 = set_exponantion(2)
++user_value1 = 5
++result = exponent2(1)
++print(f'{user_value1}^2 = ', result)
+ 
+-numbers = ['one', 'two', 3, 4, 'five', 'c++', 'c#']
+-counter = Counter(len(numbers), 2)
+-
+-try:
+-    for i in counter:
+-        print(numbers[i])
+-except Exception as e:
+-    print('catch next error: ', e.__str__())
++exponent5 = set_exponantion(5)
++user_valuer2 = 6
++result2 = exponent5(user_valuer2)
++print(f'{user_valuer2}^5 = ', result2)
