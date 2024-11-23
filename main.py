@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
 
-print('Lesson 9: Parsing Site')
+print('Lesson 10: Sqlite3')
 
 responce = requests.get('https://coinmarketcap.com/')
-
+coins_prices = []
 
 if responce.status_code == 200:
 
@@ -14,6 +14,9 @@ if responce.status_code == 200:
 
     for rate in coin_rates:
         # print('rate object -> ', rate)
-        price = float(rate.findNext().text[1:].replace(',', ''))
+        temp = rate.findNext().text[1:].replace(',', '')
+        price = float(temp)
+        # coin_rates.append(temp)
         print('price -> ', price)
 
+print('coins prices', coins_prices)

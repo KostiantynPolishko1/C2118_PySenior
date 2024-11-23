@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13cd41b9-450d-4c69-b686-d86a50516072" name="Changes" comment="1 done logic for get object coin">
+    <list default="true" id="13cd41b9-450d-4c69-b686-d86a50516072" name="Changes" comment="3 done logic for get value rate object coin">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +28,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Lesson8_LogUnitTest" />
+        <entry key="$PROJECT_DIR$" value="dev_Lesson9_ParsingSite" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +98,7 @@
       <workItem from="1731137756966" duration="6407000" />
       <workItem from="1731742036889" duration="502000" />
       <workItem from="1731742550274" duration="6495000" />
-      <workItem from="1732347331677" duration="4316000" />
+      <workItem from="1732347331677" duration="4932000" />
     </task>
     <task id="LOCAL-00001" summary="1 created branch dev_Lesson1">
       <created>1729927057500</created>
@@ -239,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732349212471</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="3 done logic for get value rate object coin">
+      <created>1732351737250</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732351737250</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,11 +283,12 @@
     <MESSAGE value="2 create unit test" />
     <MESSAGE value="1 create branch" />
     <MESSAGE value="1 done logic for get object coin" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 done logic for get object coin" />
+    <MESSAGE value="3 done logic for get value rate object coin" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 done logic for get value rate object coin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/C2118_PySenior$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1731742585261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/C2118_PySenior$main.coverage" NAME="main Coverage Results" MODIFIED="1732351534892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/C2118_PySenior$main.coverage" NAME="main Coverage Results" MODIFIED="1732352319858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/C2118_PySenior$lesson4.coverage" NAME="lesson4 Coverage Results" MODIFIED="1731138403917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
